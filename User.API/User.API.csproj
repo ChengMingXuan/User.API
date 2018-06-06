@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <None Remove="appsettings.Development.json.baiduyun.uploading.cfg" />
+    <None Remove="docker-compose - 副本.yml" />
+    <None Remove="docker-compose.yml.baiduyun.uploading.cfg" />
   </ItemGroup>
 
   <ItemGroup>
