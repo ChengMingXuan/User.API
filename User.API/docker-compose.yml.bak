@@ -1,9 +1,9 @@
-version: '3'
+﻿version: '3'
  
 services:
   db:
     image: mysql/mysql-server
-    command: mysqld --character-set-server=utf8 --collation-server=utf8_general_ci
+    command: mysqld --charater-set-server-utf8 --collation-server=utf8_general_ci
     restart: always
     ports:
        - '3306:3306'
@@ -12,7 +12,7 @@ services:
        MYSQL_USER: test
        MYSQL_PASSWORD: pwd23456
     volumes:
-       - ../../../docker/beta/mysql-init:/docker-entrypoint-initdb.d
+        - /e/docker/beta/mysql-init:/docker-entrypoint-initdb.d
   web:
      build: .
      container_name: 'aspnetcore'
@@ -20,5 +20,3 @@ services:
         - '8000:80'
      depends_on:
         - db
-     volumes:
-       - ../../../docker/project/appsettings.json:/app/appsettings.json
